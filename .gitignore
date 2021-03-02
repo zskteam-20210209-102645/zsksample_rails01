@@ -75,3 +75,4 @@ yarn-debug.log*
 
 /config/credentials.yml.enc
 /config/master.key
+/config/credentials.yml.enc
