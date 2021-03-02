@@ -1,5 +1,4 @@
 class MicropostsController < ApplicationController
-
   before_action :set_micropost, only: %i[show edit update destroy]
 
   # GET /microposts
@@ -13,7 +12,6 @@ class MicropostsController < ApplicationController
 
   def show; end
 
-
   # GET /microposts/new
   def new
     @micropost = Micropost.new
@@ -22,7 +20,6 @@ class MicropostsController < ApplicationController
   # GET /microposts/1/edit
 
   def edit; end
-
 
   # POST /microposts
   # POST /microposts.json
@@ -75,5 +72,4 @@ class MicropostsController < ApplicationController
   def micropost_params
     params.require(:micropost).permit(:content, :user_id)
   end
-
 end
