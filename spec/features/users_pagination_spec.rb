@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.feature 'Users', type: :feature do
   # 40人のユーザーを作成し、ページネーションテストを行う
-  40.times do |n|
+  40.times do |_n|
     name  = Faker::Name.name
-    email = "example-#{n + 1}@railstutorial.org"
+    email = Faker::Internet.free_email
     User.create(name: name,
                 email: email)
   end
