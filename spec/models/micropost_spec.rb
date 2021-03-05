@@ -20,7 +20,7 @@ end
 it 'テキストが140文字以上では投稿できない' do
   @micropost.content = 'aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa '
 @micropost.valid?
-expect(@micropost.errors.full_messages).to include("Content can't be blank")
+expect(@micropost.errors.full_messages).to include("Content is too long (maximum is 140 characters)")
 end  
       end     
       it 'ユーザーが紐付いていなければ投稿できない' do
