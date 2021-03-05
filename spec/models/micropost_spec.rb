@@ -11,11 +11,16 @@ RSpec.describe Micropost, type: :model do
         expect(@micropost).to be_valid
       end
     end
-    context 'ツイートが投稿できない場合' do
+    context '投稿できない場合' do
       it 'テキストが空では投稿できない' do
         @micropost.content = ''
   @micropost.valid?
   expect(@micropost.errors.full_messages).to include("Content can't be blank")
+end  
+it 'テキストが140文字以上では投稿できない' do
+  @micropost.content = 'aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa '
+@micropost.valid?
+expect(@micropost.errors.full_messages).to include("Content can't be blank")
 end  
       end     
       it 'ユーザーが紐付いていなければ投稿できない' do
