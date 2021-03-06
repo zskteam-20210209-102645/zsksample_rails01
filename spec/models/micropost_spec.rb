@@ -14,19 +14,19 @@ RSpec.describe Micropost, type: :model do
     context '投稿できない場合' do
       it 'テキストが空では投稿できない' do
         @micropost.content = ''
-  @micropost.valid?
-  expect(@micropost.errors.full_messages).to include("Content can't be blank")
-end  
-it 'テキストが140文字以上では投稿できない' do
-  @micropost.content = 'aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa '
-@micropost.valid?
-expect(@micropost.errors.full_messages).to include("Content is too long (maximum is 140 characters)")
-end  
-      end     
-      it 'ユーザーが紐付いていなければ投稿できない' do
-        @micropost.user = nil
         @micropost.valid?
-        expect(@micropost.errors.full_messages).to include('User must exist')
+        expect(@micropost.errors.full_messages).to include("Content can't be blank")
+      end
+      it 'テキストが140文字以上では投稿できない' do
+        @micropost.content = 'aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa '
+        @micropost.valid?
+        expect(@micropost.errors.full_messages).to include('Content is too long (maximum is 140 characters)')
       end
     end
+    it 'ユーザーが紐付いていなければ投稿できない' do
+      @micropost.user = nil
+      @micropost.valid?
+      expect(@micropost.errors.full_messages).to include('User must exist')
+    end
   end
+end
