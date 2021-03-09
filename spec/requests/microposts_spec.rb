@@ -15,11 +15,10 @@ describe MicropostsController, type: :request do
       response
     end
 
-  it { is_expected.to have_http_status(:ok) }
+    it { is_expected.to have_http_status(:ok) }
     it 'indexアクションにリクエストするとレスポンスに投稿済みのテキストが存在する' do
       expect(action.body).to include(micropost.content)
     end
- 
   end
 
   describe 'GET #show' do
@@ -32,5 +31,4 @@ describe MicropostsController, type: :request do
       expect(action.body).to include(micropost.content)
     end
   end
- 
 end
