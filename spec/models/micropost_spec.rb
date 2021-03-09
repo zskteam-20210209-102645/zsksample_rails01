@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Micropost, type: :model do
+<<<<<<< HEAD
   before do
     @micropost = FactoryBot.build(:micropost)
   end
@@ -29,4 +30,7 @@ RSpec.describe Micropost, type: :model do
       expect(@micropost.errors.full_messages).to include('User must exist')
     end
   end
+=======
+  pending "add some examples to (or delete) #{__FILE__}"
+>>>>>>> parent of 2bce03f (Merge branch 'develop' of https://github.com/zskteam-20210209-102645/zsksample_rails01 into develop)
 end

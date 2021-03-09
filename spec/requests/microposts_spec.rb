@@ -23,7 +23,7 @@ describe MicropostsController, type: :request do
 
   describe 'GET #show' do
     subject(:action) do
-      get microposts_path(micropost)
+      get micropost_path(micropost)
       response
     end
     it { is_expected.to have_http_status(:ok) }
