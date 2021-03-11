@@ -10,7 +10,7 @@ describe MicropostsController, type: :system do
    response
   end
   it { is_expected.to have_http_status(:ok) }
-  it 'マイクロポストに'Destroy'のリンクがあることを確認する' do
+  it 'マイクロポストにDestroyのリンクがあることを確認する' do
    expect(action.body).to have_link 'Destroy'
   end
  end
