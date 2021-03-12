@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-  describe MicropostsController, type: :system do
+describe MicropostsController, type: :system do
   let(:user) { FactoryBot.build(:user) }
 
   before do
