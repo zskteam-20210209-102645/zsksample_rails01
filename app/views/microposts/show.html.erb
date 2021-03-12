@@ -11,7 +11,7 @@
 </p>
 
 <% if @micropost.image.attached? %>
-  <%= image_tag @micropost.image %>
+  <%= image_tag @micropost.image.variant(resize: '500x500') %>
 <% end %>
 
 <%= link_to 'Edit', edit_micropost_path(@micropost) %> |
