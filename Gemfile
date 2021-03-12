@@ -24,6 +24,7 @@ gem 'jbuilder', '2.10.0'
 gem 'bootstrap-sass', '3.4.1'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker', '2.1.2'
+gem 'kaminari'
 gem 'will_paginate', '3.1.8'
 
 # Use Active Storage variant
