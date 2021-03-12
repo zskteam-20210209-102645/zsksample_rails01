@@ -21,6 +21,7 @@
         <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    <%= paginate @microposts %>
   </tbody>
 </table>
 
