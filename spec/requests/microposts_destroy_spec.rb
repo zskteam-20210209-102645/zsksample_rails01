@@ -1,10 +1,11 @@
 require 'rails_helper'
 
   describe MicropostsController, type: :system do
-    let(:user) { FactoryBot.build(:user) }
-    before do
-      @micropost1 = FactoryBot.create(:micropost, user: user)
-    end
+  let(:user) { FactoryBot.build(:user) }
+
+  before do
+    @micropost1 = FactoryBot.create(:micropost, user: user)
+  end
 
   describe 'GET #destroy' do
     subject(:action) do
