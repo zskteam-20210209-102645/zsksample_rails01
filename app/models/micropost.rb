@@ -5,6 +5,6 @@ class Micropost < ApplicationRecord
   validates :content, length: { maximum: 140 }, presence: true, unless: :was_attached?
 
   def was_attached?
-    self.image.attached?
+    image.attached? # self.image.attached? の場合、[Checkのエラーが発生: Style/RedundantSelf: Redundant self detected.]
   end
 end

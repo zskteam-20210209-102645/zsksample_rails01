@@ -26,10 +26,9 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'faker', '2.1.2'
 gem 'will_paginate', '3.1.8'
 
-
-
-gem 'mini_magick'
+# Use ActiveStorage
 gem 'image_processing', '~> 1.2'
+gem 'mini_magick'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
