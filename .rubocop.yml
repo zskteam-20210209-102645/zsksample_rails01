@@ -23,6 +23,13 @@ Style/FrozenStringLiteralComment:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+Metrics/AbcSize:
+  Max: 20
+
+MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 20
     
 Layout/LineLength:
   Enabled: false
